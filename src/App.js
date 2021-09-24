@@ -2,7 +2,6 @@ import React, { Suspense } from 'react';
 import { Route, Switch, Redirect } from 'react-router-dom';
 import Layout from './components/layout/Layout';
 import LoadingSpinner from './components/UI/LoadingSpinner';
-import NotFound from './pages/NotFound';
 
 /**
  * lazy loading result dynamic import, call import as a function.
@@ -12,7 +11,7 @@ import NotFound from './pages/NotFound';
  * so Suspense come in.
  */
 const NewQuote = React.lazy(() => import('./pages/NewQuote'));
-const Notfound = React.lazy(() => import('./pages/NotFound'));
+const NotFound = React.lazy(() => import('./pages/NotFound'));
 const AllQuotes = React.lazy(() => import('./pages/AllQuotes'));
 
 function App() {
